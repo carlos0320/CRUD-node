@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 
 
 
-
 app.listen(5003, () =>{
     console.log('escuchando en el puerto 5003')
 })
