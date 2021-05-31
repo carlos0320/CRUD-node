@@ -12,7 +12,6 @@ app.post('/post', ( req, res ) => {
     res.status(201).json(post);
 })
 
-
 app.listen(5003, () =>{
     console.log('escuchando en el puerto 5003')
 })
