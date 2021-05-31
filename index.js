@@ -6,7 +6,11 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.post('/post', ( req, res ) => {
+    post.push(req.body);
 
+    res.status(201).json(post);
+})
 
 
 app.listen(5003, () =>{
