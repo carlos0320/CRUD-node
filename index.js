@@ -6,18 +6,12 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.patch('/post/:id', (req, res) => {
+app.post('/post', ( req, res ) => {
+    post.push(req.body);
 
-   const nuevoPost= post.map( elemento => {
-        if( elemento.id == req.params.id){
-            return elemento = req.body
-        }else{
-            return elemento
-        }
-
-    })
-
-    res.status(200).json(nuevoPost)
+    res.status(201).json(post);
+app.get('/post', (req, res) => {
+    res.status(200).json(post)
 })
 
 app.listen(5003, () =>{
